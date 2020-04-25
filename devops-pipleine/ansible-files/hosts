@@ -1,0 +1,21 @@
+[blrweb]
+172.18.50.115
+
+[blrdb]
+172.18.50.115
+
+#groups of groups : blr group is a group of blrweb and  blrdb groups
+[blr:children]
+blrweb
+blrdb
+
+#[blr:vars]
+#ansible_python_interpreter=/usr/bin/python3
+#ansible_user=flexera
+#ansible_ssh_private_key_file=
+#ansible_become_user=root
+#ansible_become_password=
+#ansible_connection=ssh
+
+[india:children]
+blr
